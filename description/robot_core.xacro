@@ -19,6 +19,11 @@
     <color rgba="0 0 0 1"/>
 </material>
 
+<material name="red">
+    <color rgba="1 0 0 1"/>
+</material>
+
+
 <link name="base_link">
 </link>
 
@@ -29,6 +34,16 @@
     <child link="chassis"/>
     <origin xyz="-0.1 0 0"/>
 </joint>
+
+    <!--BASE FOOTPRINT-->
+<joint name="base_footprint_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0 0 0" rpy ="0 0 0" />
+</joint>
+
+<link name="base_footprint">
+</link>
 
     <!--CHASSIS-->
 
@@ -52,7 +67,7 @@
 </link>
 
 <gazebo reference="chassis">
-    <material>Gazebo/Orange</material>
+    <material>Gazebo/White</material>
 </gazebo>            
 
 
